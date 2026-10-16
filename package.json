@@ -3,14 +3,28 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
+    "@cap-js/db-service": "^3.1.2",
     "@cap-js/hana": "^3",
-    "@sap/cds": "^10"
+    "@sap/cds": "^10.1.1"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^3"
+    "@cap-js/sqlite": "^3.1.2"
   },
   "scripts": {
     "start": "cds-serve"
   },
-  "private": true
+  "private": true,
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    }
+  }
 }

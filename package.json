@@ -24,6 +24,19 @@
         "credentials": {
           "url": "db.sqlite"
         }
+      },
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "cliente@sap.com": {
+              "password": "abc123",
+              "roles": [
+                "cliente"
+              ]
+            }
+          }
+        }
       }
     }
   }
